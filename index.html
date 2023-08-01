@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>DeeDからの挑戦状 tp_simple14</title>
+<title>DeeDからの挑戦状</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
@@ -22,11 +22,17 @@
 <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Site"></a></h1>
 <nav id="menubar-s">
 <ul>
-<li><a href="home.html"><span>ホーム</span>Home</a></li>
-<li><a href="about.html"><span>当サイトについて</span>About</a></li>
-<li><a href="works.html"><span>作品</span>Works</a></li>
-<li><a href="link.html"><span>リンク</span>Link</a></li>
-<li><a href="contact.html"><span>お問い合わせ</span>Contact</a></li>
+	<li><a href="index.html"><span>ホーム</span>Home</a></li>
+	<li><a href="music1.html"><span>12+</span>Music１</a></li>
+	<li><a href="music2.html"><span>13</span>Music２</a></li>
+	<li><a href="music3.html"><span>13+</span>Music３</a></li>
+	<li><a href="music4.html"><span>14</span>Music４</a></li>
+	<li><a href="music+.html"><span>14</span>Music＋</a></li>
+	<li><a href="music5.html"><span>14+</span>Music５</a></li>
+	<li><a href="music++.html"><span>14+</span>Music＋＋</a></li>
+	<li><a href="music6.html"><span>15</span>Music６</a></li>
+	<li><a href="boss.html"><span>15</span>BOSS</a></li>
+	<li><a href="deed.html"><span>???</span>DeeDからの挑戦状</a></li>
 </ul>
 </nav>
 </div>
@@ -35,16 +41,64 @@
 
 <div id="main">
 
+	<section class="box">
 
-<section class="box">
+		<h2><span>MUSIC１</span></h2>
+		<h4>３曲出題</h4>
+		<p>夏色花火でアマリリス先輩が打ち上げられなかった花火を頑張って打ち上げてみました。<br>弾では無理だったけど...。</p>
+		<p>DECO*27の62作目</p>
+		<p>第１章チャプター５「ハルちゃん印のお弁当」より</p>
+		
+		<form action="" method="post">
+			<div>
+				<label for="m1">楽曲名</label>
+				<input type="text" id="m1" name="m1">
+			</div>
+			<div>
+				<label for="m2">楽曲名</label>
+				<input type="text" id="m2" name="m2">
+			</div>
+			<div>
+				<label for="m3">楽曲名</label>
+				<input type="text" id="m3" name="m3">
+			</div>
+			<button type="button" onclick="checkInput()">解答</button>
 
-<h2>課題の進め方</h2>
+		</form>
 
-<p>課題画面に表示されている複数のお題に当てはまる楽曲名をフォームに入力して解答ボタンを押すと、その楽曲の課題が表示されます。完答必須のためオンゲキNETや譜面保管所からのコピペを推奨します。</p>
+		<h2 id="title" style="display: none;"><span>課題が出現しました</span></h2>
+		<p id="a1" style="display: none;">夏宵スターマイン MASTER:12+ ABFB</p>
+		<p id="a2" style="display: none;">ヴァンパイア MASTER:12+ ABFB スコア1009500点以上</p>
+		<p id="a3" style="display: none;">What color... MASTER:12+ ABFB スコア1008000点以上</p>
 
-</section>
+		</section>
+		
+		
+			
+		  <script>
+			function checkInput() {
+			  const q1 = document.getElementById('m1').value;
+			  const q2 = document.getElementById('m2').value;
+			  const q3 = document.getElementById('m3').value;
 
-	
+			  const  r1= '夏宵スターマイン'; 
+			  const  r2= 'ヴァンパイア'; 
+			  const  r3= 'What color...'; 
+
+		
+			  if (q1 === r1 && q2 === r2 && q3 === r3) {
+				document.getElementById('title').style.display = 'block';
+				document.getElementById('a1').style.display = 'block';
+				document.getElementById('a2').style.display = 'block';
+				document.getElementById('a3').style.display = 'block';
+
+			  } else {
+				alert('楽曲名が正しくありません。');
+			  }
+			}
+		  </script>
+
+
 </div>
 <!--/main-->
 
@@ -55,17 +109,23 @@
 
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
-<ul>
-<li><a href="index.html"><span>ホーム</span>Home</a></li>
-<li><a href="about.html"><span>当サイトについて</span>About</a></li>
-<li><a href="works.html"><span>作品</span>Works</a></li>
-<li><a href="link.html"><span>リンク</span>Link</a></li>
-<li><a href="contact.html"><span>お問い合わせ</span>Contact</a></li>
-</ul>
-</nav>
-
-</div>
-<!--/sub-->
+	<ul>
+		<li><a href="index.html"><span>ホーム</span>Home</a></li>
+		<li><a href="music1.html"><span>12+</span>Music１</a></li>
+		<li><a href="music2.html"><span>13</span>Music２</a></li>
+		<li><a href="music3.html"><span>13+</span>Music３</a></li>
+		<li><a href="music4.html"><span>14</span>Music４</a></li>
+		<li><a href="music+.html"><span>14</span>Music＋</a></li>
+		<li><a href="music5.html"><span>14+</span>Music５</a></li>
+		<li><a href="music++.html"><span>14+</span>Music＋＋</a></li>
+		<li><a href="music6.html"><span>15</span>Music６</a></li>
+		<li><a href="boss.html"><span>15</span>BOSS</a></li>
+		<li><a href="deed.html"><span>???</span>DeeDからの挑戦状</a></li>
+	</ul>
+	</nav>
+	
+	</div>
+	<!--/sub-->
 
 <p id="pagetop"><a href="#">↑</a></p>
 
@@ -77,13 +137,6 @@
 </div>
 <!--/container-->
 
-<!--更新情報の開閉処理条件設定　800px以下-->
-<script>
-if (OCwindowWidth() <= 800) {
-	open_close("newinfo_hdr", "newinfo");
-}
-</script>
-
 <!--メニューの３本バー-->
 <div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
 
@@ -93,6 +146,39 @@ if (OCwindowWidth() <= 800) {
 	open_close("menubar_hdr", "menubar-s");
 }
 </script>
+
+<script>
+	document.getElementById("title").style.visibility="none";
+</script>
+
+<script>
+	if(m1=="夏宵スターマイン" && m2=="ヴァンパイア" && m3=="What color..."){
+		num=0;
+	}
+</script>
+
+<!--
+<script>
+	function _switch(num) {
+        // もし（数字が0であれば）{
+        if (num == 0) {
+          // id名textのCSSスタイルをdisplay:block（表示）にする
+          document.getElementById("title").style.visibility="block";
+		  document.getElementById("a1").style.visibility="block";
+		  document.getElementById("a2").style.visibility="block";
+		  document.getElementById("a3").style.visibility="block";
+        }
+        // 　そうでなければ
+          else {
+            // id名textのCSSスタイルをdisplay:none（非表示）にする
+          document.getElementById("title").style.visibility="none";
+		  document.getElementById("a1").style.visibility="none";
+		  document.getElementById("a2").style.visibility="none";
+		  document.getElementById("a3").style.visibility="none";
+          }
+        }
+</script>
+-->
 
 </body>
 </html>
