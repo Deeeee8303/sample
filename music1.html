@@ -17,26 +17,6 @@
 
 <body>
 
-<!--小さな端末用（800px以下端末）のロゴとメニュー-->
-<div id="sh">
-<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Site"></a></h1>
-<nav id="menubar-s">
-<ul>
-	<li><a href="index.html"><span>ホーム</span>Home</a></li>
-	<li><a href="music1.html"><span>12+</span>Music１</a></li>
-	<li><a href="music2.html"><span>13</span>Music２</a></li>
-	<li><a href="music3.html"><span>13+</span>Music３</a></li>
-	<li><a href="music4.html"><span>14</span>Music４</a></li>
-	<li><a href="music+.html"><span>14</span>Music＋</a></li>
-	<li><a href="music5.html"><span>14+</span>Music５</a></li>
-	<li><a href="music++.html"><span>14+</span>Music＋＋</a></li>
-	<li><a href="music6.html"><span>15</span>Music６</a></li>
-	<li><a href="boss.html"><span>15</span>BOSS</a></li>
-	<li><a href="deed.html"><span>???</span>DeeDからの挑戦状</a></li>
-</ul>
-</nav>
-</div>
-
 <div id="container">
 
 <div id="main">
@@ -63,6 +43,7 @@
 				<input type="text" id="m3" name="m3">
 			</div>
 			<button type="button" onclick="checkInput()">解答</button>
+			
 
 		</form>
 
@@ -73,9 +54,15 @@
 
 		</section>
 		
+
+		<div>
+			<button type="button" onclick="deleteInput()">削除</button>
+		</div>
 		
 			
 		  <script>
+			
+
 			function checkInput() {
 			  const q1 = document.getElementById('m1').value;
 			  const q2 = document.getElementById('m2').value;
@@ -87,15 +74,25 @@
 
 		
 			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				document.getElementById('title').style.display = 'block';
-				document.getElementById('a1').style.display = 'block';
-				document.getElementById('a2').style.display = 'block';
-				document.getElementById('a3').style.display = 'block';
-
+				localStorage.setItem("flg","1");
+				alert(localStorage.getItem("flg"));
+				
 			  } else {
 				alert('楽曲名が正しくありません。');
 			  }
+
+			  if(localStorage.getItem("flg") == "1"){
+			  	document.getElementById('title').style.display = 'block';
+			  	document.getElementById('a1').style.display = 'block';
+		      	document.getElementById('a2').style.display = 'block';
+			  	document.getElementById('a3').style.display = 'block';
 			}
+		}
+		
+		function deleteInput() {
+			localStorage.removeItem("flg");
+		}
+
 		  </script>
 
 
@@ -107,25 +104,7 @@
 <!--PC用（801px以上端末）ロゴ-->
 <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Site"></a></h1>
 
-<!--PC用（801px以上端末）メニュー-->
-<nav id="menubar">
-	<ul>
-		<li><a href="index.html"><span>ホーム</span>Home</a></li>
-		<li><a href="music1.html"><span>12+</span>Music１</a></li>
-		<li><a href="music2.html"><span>13</span>Music２</a></li>
-		<li><a href="music3.html"><span>13+</span>Music３</a></li>
-		<li><a href="music4.html"><span>14</span>Music４</a></li>
-		<li><a href="music+.html"><span>14</span>Music＋</a></li>
-		<li><a href="music5.html"><span>14+</span>Music５</a></li>
-		<li><a href="music++.html"><span>14+</span>Music＋＋</a></li>
-		<li><a href="music6.html"><span>15</span>Music６</a></li>
-		<li><a href="boss.html"><span>15</span>BOSS</a></li>
-		<li><a href="deed.html"><span>???</span>DeeDからの挑戦状</a></li>
-	</ul>
-	</nav>
-	
-	</div>
-	<!--/sub-->
+
 
 <p id="pagetop"><a href="#">↑</a></p>
 
@@ -156,29 +135,6 @@ if (OCwindowWidth() <= 800) {
 		num=0;
 	}
 </script>
-
-<!--
-<script>
-	function _switch(num) {
-        // もし（数字が0であれば）{
-        if (num == 0) {
-          // id名textのCSSスタイルをdisplay:block（表示）にする
-          document.getElementById("title").style.visibility="block";
-		  document.getElementById("a1").style.visibility="block";
-		  document.getElementById("a2").style.visibility="block";
-		  document.getElementById("a3").style.visibility="block";
-        }
-        // 　そうでなければ
-          else {
-            // id名textのCSSスタイルをdisplay:none（非表示）にする
-          document.getElementById("title").style.visibility="none";
-		  document.getElementById("a1").style.visibility="none";
-		  document.getElementById("a2").style.visibility="none";
-		  document.getElementById("a3").style.visibility="none";
-          }
-        }
-</script>
--->
 
 </body>
 </html>
