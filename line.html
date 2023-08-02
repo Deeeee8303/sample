@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>DeeDからの挑戦状</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/openclose.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="main">
+
+	<section class="box">
+
+		<h2><span>DeeDからの挑戦状</span></h2>
+		<h4>？曲出題</h4>
+		<p>蜿ｳ謇玖ｲ?蛯ｷ荳ｭ</p>
+		<p>邵ｺ?ｪ邵ｺ?ｮ邵ｺ?ｧ1隴鯉ｽ･1郢ｧ?ｲ郢ｧ?ｭ</p>
+		<p>11100011 10000001 10110101 11100011 10000001 10000001 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110</p>
+
+		
+		
+		<form action="" method="post">
+			<div>
+				<label for="m1">キーワード</label>
+				<input type="text" id="m1" name="m1">
+			</div>
+			<button type="button" onclick="checkInput()">解答</button>
+			<ul>
+				<li><a href="file.html">戻る</a></li>
+			</ul>
+			
+
+		</form>
+
+		<h2 id="title" style="display: none;"><span>課題が出現しました</span></h2>
+		<p id="a1" style="display: none;">セガサターン起動音[H.][Remix] LUNATIC:0 二人の合計スコアが2015500点以上</p>
+		<p id="a2" style="display: none;">ウサテイ LUNATIC:0 二人の合計スコアが2017200点以上</p>
+		<p id="a3" style="display: none;">青春サイダー MASTER:13 二人の合計スコアが2018700点以上</p>
+		<p id="a4" style="display: none;">まっすぐ→→→ストリーム！ MASTER:13 二人の合計スコアが2019300点以上</p>
+		<p id="a5" style="display: none;">NEXT COLOR PLANET MASTER:13 二人の合計スコアが2018800点以上</p>
+		<p id="a6" style="display: none;">※この課題は、一つクリアするごとに残りの楽曲の内どれか一曲の達成条件から-5000点できます。(詳しくは主催へ)</p>
+
+
+		</section>
+		
+
+		<div>
+			<button type="button" onclick="deleteInput()">削除</button>
+		</div>
+		
+			
+		  <script>
+			
+
+			function checkInput() {
+			  const q1 = document.getElementById('m1').value;
+			  
+
+			  const  r1= '脳天15.1'; 
+			  
+		
+			  if (q1 === r1) {
+				localStorage.setItem("flg9","1");
+				alert(localStorage.getItem("flg9"));
+				
+			  } else {
+				alert('楽曲名が正しくありません。');
+			  }
+
+			  if(localStorage.getItem("flg9") == "1"){
+			  	document.getElementById('title').style.display = 'block';
+			  	document.getElementById('a1').style.display = 'block';
+		      	document.getElementById('a2').style.display = 'block';
+			  	document.getElementById('a3').style.display = 'block';
+				document.getElementById('a4').style.display = 'block';
+			  	document.getElementById('a5').style.display = 'block';
+				document.getElementById('a6').style.display = 'block';
+				document.getElementById('menubar').style.display = 'block';
+
+			}
+		}
+		
+		function deleteInput() {
+			localStorage.removeItem("flg9");
+		}
+
+		  </script>
+
+
+</div>
+<!--/main-->
+
+<div id="sub">
+
+<!--PC用（801px以上端末）ロゴ-->
+<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Site"></a></h1>
+
+
+
+<p id="pagetop"><a href="#">↑</a></p>
+
+<footer>
+<small>Copyright&copy; <a href="index.html">Sample Web Site</a> All Rights Reserved.</small>
+<span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+</div>
+<!--/container-->
+
+<!--メニューの３本バー-->
+<div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
+
+<!--メニューの開閉処理条件設定　800px以下-->
+<script>
+if (OCwindowWidth() <= 800) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+
+<script>
+	document.getElementById("title").style.visibility="none";
+</script>
+
+
+
+</body>
+</html>
