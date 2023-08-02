@@ -92,8 +92,18 @@
 		function deleteInput() {
 			localStorage.removeItem("flg");
 		}
+		</script>
+		<script>
+			var mflg = localStorage.getItem("flg");
+			if(mflg == "1" ){
+			var mus = window.parent.document.getElementById("music2");
+            if (mus) {
+                music2.style.display = "block";
+            }
+	}
 
 		  </script>
+
 
 
 </div>
