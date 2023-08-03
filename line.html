@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>DeeDからの挑戦状</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="てるてる朝霞店">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="DeeDからの挑戦状"></a></h1>
+
+<!--メニュー-->
+<div id="menubar">
+
+</header>
+
+<main>
+
+<article>
+
+    <section class="box">
+
+		<h2>DeeDからの挑戦状</h2>
+		<h4>？曲出題 (楽曲名ではなくキーワードを入力してね)</h4>
+		<p>蜿ｳ謇玖ｲ?蛯ｷ荳ｭ</p>
+		<p>邵ｺ?ｪ邵ｺ?ｮ邵ｺ?ｧ1隴鯉ｽ･1郢ｧ?ｲ郢ｧ?ｭ</p>
+		<p>11100011 10000001 10110101 11100011 10000001 10000001 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110 11101111 10111101 10011110</p>
+		
+		<form action="" method="post">
+			<div>
+				<label for="m1">キーワード</label>
+				<input type="text" id="m1" name="m1">
+			</div>
+			<br>
+		<br>
+		<br>
+			<div class="button_solid006">
+				<a href="#" onclick="checkInput()">解答する</a>
+			  </div>
+
+			  <br>
+			  <br>
+			  <br>
+
+
+
+	<h2 id="title" style="display: none;">課題が出現しました</h2>
+	<p id="a1" style="display: none;">セガサターン起動音[H.][Remix] LUNATIC:0 二人の合計スコアが2015500点以上</p>
+	<p id="a2" style="display: none;">ウサテイ LUNATIC:0 二人の合計スコアが2017200点以上</p>
+	<p id="a3" style="display: none;">青春サイダー MASTER:13 二人の合計スコアが2018700点以上</p>
+	<p id="a4" style="display: none;">まっすぐ→→→ストリーム！ MASTER:13 二人の合計スコアが2019300点以上</p>
+	<p id="a5" style="display: none;">NEXT COLOR PLANET MASTER:13 二人の合計スコアが2018800点以上</p>
+	<p id="a6" style="display: none;">※この課題は、一つクリアするごとに残りの楽曲の内どれか一曲の達成条件から-5000点できます。(詳しくは主催へ)</p>
+
+
+		<nav id="next" style="display:none" >
+			<ul>
+				<p><a href="you.html" class="btn1 large radius"><span class="pc">課題達成<i class="fas fa-arrow-circle-right"></i></a></p>
+			</ul>
+		</nav>
+
+
+        <script>
+			
+
+			function checkInput() {
+			  const q1 = document.getElementById('m1').value;
+			  
+
+			  const  r1= '脳天15.1';
+
+		
+			  if (q1 === r1) {
+				localStorage.setItem("flg10","1");
+				
+			  } else {
+				alert('楽曲名が正しくありません。');
+			  }
+
+			  if(localStorage.getItem("flg10") == "1"){
+			  	document.getElementById('title').style.display = 'block';
+			  	document.getElementById('a1').style.display = 'block';
+		      	document.getElementById('a2').style.display = 'block';
+			  	document.getElementById('a3').style.display = 'block';
+				document.getElementById('a4').style.display = 'block';
+			  	document.getElementById('a5').style.display = 'block';
+				document.getElementById('a6').style.display = 'block';
+				document.getElementById('next').style.display = 'block';
+			}
+		}
+		
+		function deleteInput() {
+			localStorage.removeItem("flg10");
+		}
+		</script>
+        <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+        <p class="c"><a href="javascript:history.back()">&lt;&lt; 前のページに戻る</a></p>
+
+</article>
+
+<div>
+    <button type="button" onclick="deleteInput()">削除</button>
+</div>
+
+</main>
+
+
+
+
+
+<footer>
+
+<small>Copyright&copy; <a href="index.html">サンプル派遣会社</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+
+</footer>
+
+</div>
+<!--/#container-->
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--スライドショー（slick）-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slick.js"></script>
+
+</body>
+</html>

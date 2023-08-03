@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>DeeDからの挑戦状</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="てるてる朝霞店">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="DeeDからの挑戦状"></a></h1>
+
+<!--メニュー-->
+<div id="menubar">
+
+</header>
+
+<main>
+
+<article>
+
+    <section class="box">
+
+		<h2>MUSIC５</h2>
+		<h4>３曲出題</h4>
+		<p>蝨ｰ荳雁･ｪ蜿匁ｴｾ?医う繝弱?繧､繧ｿ繝ｼ?峨?螢ｫ螳</p>
+		<p>螯也ｲｾ縺ｮ邇九が繝ｼ繝吶Ο繝ｳ縺ｮ螯ｻ -逵溷､上?螟懊?螟｢繧医ｊ-</p>
+		<p>郢晄ｧｭ縺?ｹｧ?ｯ郢晢ｽｭ郢ｧ?ｽ郢晁ｼ斐Κ郢晢ｽｪ郢ｧ?ｵ郢晢ｽｼ郢昶?窶ｲ2003陝ｷ?ｴ邵ｺ荵晢ｽ芽楜貊?ｽｨ骰句飭邵ｺ?ｫ鬮｢迢怜験邵ｺ蜉ｱ窶ｻ邵ｺ??狗ｹｧ?ｪ郢晏｣ｹﾎ樒ｹ晢ｽｼ郢?縺?ｹ晢ｽｳ郢ｧ?ｰ郢ｧ?ｷ郢ｧ?ｹ郢?ﾎ堤ｸｺ?ｮ陷ｷ蜥ｲ?ｧ?ｰ</p>
+		
+		<form action="" method="post">
+			<div>
+				<label for="m1">楽曲名</label>
+				<input type="text" id="m1" name="m1">
+			</div>
+			<div>
+				<label for="m2">楽曲名</label>
+				<input type="text" id="m2" name="m2">
+			</div>
+			<div>
+				<label for="m3">楽曲名</label>
+				<input type="text" id="m3" name="m3">
+			</div>
+			<br>
+		<br>
+		<br>
+			<div class="button_solid006">
+				<a href="#" onclick="checkInput()">解答する</a>
+			  </div>
+
+			  <br>
+			  <br>
+			  <br>
+
+
+
+<h2 id="title" style="display: none;">課題が出現しました</h2>
+<p id="a1" style="display: none;">Last Celebration MASTER:14+ スコア1003000以上</p>
+<p id="a2" style="display: none;">Titania MASTER:14+ スコア1007500点以上</p>
+<p id="a3" style="display: none;">Singularity MASTER:14+ スコア1003000点以上</p>
+
+		<nav id="next" style="display:none" >
+			<ul>
+				<p><a href="yoink.html" class="btn1 large radius"><span class="pc">MUSIC＋＋<i class="fas fa-arrow-circle-right"></i></a></p>
+			</ul>
+		</nav>
+
+
+        <script>
+			
+
+			function checkInput() {
+			  const q1 = document.getElementById('m1').value;
+			  const q2 = document.getElementById('m2').value;
+			  const q3 = document.getElementById('m3').value;
+
+			  const  r1= 'Last Celebration'; 
+			  const  r2= 'Titania'; 
+			  const  r3= 'Singularity'; 
+
+		
+			  if (q1 === r1 && q2 === r2 && q3 === r3) {
+				localStorage.setItem("flg6","1");
+				
+			  } else {
+				alert('楽曲名が正しくありません。');
+			  }
+
+			  if(localStorage.getItem("flg6") == "1"){
+			  	document.getElementById('title').style.display = 'block';
+			  	document.getElementById('a1').style.display = 'block';
+		      	document.getElementById('a2').style.display = 'block';
+			  	document.getElementById('a3').style.display = 'block';
+				document.getElementById('next').style.display = 'block';
+			}
+		}
+		
+		function deleteInput() {
+			localStorage.removeItem("flg6");
+		}
+		</script>
+        <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+        <p class="c"><a href="javascript:history.back()">&lt;&lt; 前のページに戻る</a></p>
+
+</article>
+
+<div>
+    <button type="button" onclick="deleteInput()">削除</button>
+</div>
+
+</main>
+
+
+
+
+
+<footer>
+
+<small>Copyright&copy; <a href="index.html">サンプル派遣会社</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+
+</footer>
+
+</div>
+<!--/#container-->
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--スライドショー（slick）-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slick.js"></script>
+
+</body>
+</html>

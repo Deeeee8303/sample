@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>DeeDからの挑戦状</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="てるてる朝霞店">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="DeeDからの挑戦状"></a></h1>
+
+<!--メニュー-->
+<div id="menubar">
+
+</header>
+
+<main>
+
+<article>
+
+    <section class="box">
+
+		<h2>MUSIC６</h2>
+		<h4>３曲出題</h4>
+		<p>110010 110000 110010 110010 11100101 10111001 10110100 111001 11100110 10011100 10001000 110001 11100110 10010111 10100101 100000 11101000 10100110 10010110 11101000 10000001 10110100 11100101 10011011 10011110 11100110 10010101 10110000 110001 101110 110001 11100100 10111000 10000111 11100101 10011011 10011110</p>
+		<p>11001110 10111000 11001111 10001001 11001110 10111000 100000 11101111 10111110 10000110 11101111 10111101 10101100 11101111 10111110 10001100 11101111 10111110 10000110 11101111 10111101 10101100 11101111 10111110 10001100 101110 101110 101110</p>
+		<p>11100111 10011001 10111110 11100101 10010000 10001000 11100101 10010010 10110010 11100011 10000011 10011111 11100011 10000010 10101011 11100011 10000000 10000001 11100101 10000101 10101011 11100101 10001001 10110001 11100110 10011100 10001000 11100011 10000010 10100010 11100011 10000011 10101011 11100011 10000011 10011110 11100011 10000000 10000001 11100111 10011001 10111101 11101001 10001010 10000101 11100101 10101111 10111010 11100011 10000010 10100010 11100011 10000010 10111010 11100011 10000011 10101010 11100011 10000000 10000001 11100101 10000101 10101011 11100101 10001001 10110001 11100110 10011100 10001000 11100011 10000010 10100010 11100011 10000011 10101011 11100011 10000011 10011110 11101111 10111100 10001000 11100101 10100000 10010101 11100101 10100100 10101001 11101111 10111100 10001001 101110 101110 101110 101110 101110 101110 101110 101110 101110 101110 101110 101110 101110 11101111 10111100 10011111</p>
+		
+		<form action="" method="post">
+			<div>
+				<label for="m1">楽曲名</label>
+				<input type="text" id="m1" name="m1">
+			</div>
+			<div>
+				<label for="m2">楽曲名</label>
+				<input type="text" id="m2" name="m2">
+			</div>
+			<div>
+				<label for="m3">楽曲名</label>
+				<input type="text" id="m3" name="m3">
+			</div>
+			<br>
+		<br>
+		<br>
+			<div class="button_solid006">
+				<a href="#" onclick="checkInput()">解答する</a>
+			  </div>
+
+			  <br>
+			  <br>
+			  <br>
+
+
+
+<h2 id="title" style="display: none;">課題が出現しました</h2>
+<p id="a1" style="display: none;">怨撃 MASTER:15 完走</p>
+<p id="a2" style="display: none;">ω4 MASTER:15 スコア1007000点以上</p>
+<p id="a3" style="display: none;">Regulus MASTER:15 SSS</p>
+
+		<nav id="next" style="display:none" >
+			<ul>
+				<p><a href="file.html" class="btn1 large radius"><span class="pc">BOSS<i class="fas fa-arrow-circle-right"></i></a></p>
+			</ul>
+		</nav>
+
+
+        <script>
+			
+
+			function checkInput() {
+			  const q1 = document.getElementById('m1').value;
+			  const q2 = document.getElementById('m2').value;
+			  const q3 = document.getElementById('m3').value;
+
+			  const  r1= '怨撃'; 
+			  const  r2= 'ω4'; 
+			  const  r3= 'Regulus'; 
+
+		
+			  if (q1 === r1 && q2 === r2 && q3 === r3) {
+				localStorage.setItem("flg8","1");
+				
+			  } else {
+				alert('楽曲名が正しくありません。');
+			  }
+
+			  if(localStorage.getItem("flg8") == "1"){
+			  	document.getElementById('title').style.display = 'block';
+			  	document.getElementById('a1').style.display = 'block';
+		      	document.getElementById('a2').style.display = 'block';
+			  	document.getElementById('a3').style.display = 'block';
+				document.getElementById('next').style.display = 'block';
+			}
+		}
+		
+		function deleteInput() {
+			localStorage.removeItem("flg8");
+		}
+		</script>
+        <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+        <p class="c"><a href="javascript:history.back()">&lt;&lt; 前のページに戻る</a></p>
+
+</article>
+
+<div>
+    <button type="button" onclick="deleteInput()">削除</button>
+</div>
+
+</main>
+
+
+
+
+
+<footer>
+
+<small>Copyright&copy; <a href="index.html">サンプル派遣会社</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+
+</footer>
+
+</div>
+<!--/#container-->
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--スライドショー（slick）-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slick.js"></script>
+
+</body>
+</html>
