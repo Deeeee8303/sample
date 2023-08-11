@@ -56,10 +56,11 @@
 			  <br>
 			  <br>
 			  <br>
-<h2 id="title" style="display: none;">課題が出現しました</h2>
-		<p id="a1" style="display:none">夏宵スターマイン MASTER:12+ ABFB</p>
-		<p id="a2" style="display:none">ヴァンパイア MASTER:12+ ABFB スコア1009500点以上</p>
-		<p id="a3" style="display:none">What color... MASTER:12+ ABFB スコア1008000点以上</p>
+
+		<h2 id="title"> </h2>
+		<p id="a1" > </p>
+		<p id="a2" > </p>
+		<p id="a3" > </p>
 
 		<nav id="next" style="display:none" >
 			<div class="button_solid006">
@@ -80,27 +81,43 @@
 			  const  r2= 'ヴァンパイア'; 
 			  const  r3= 'What color...'; 
 
-		
+			
+
+
 			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				localStorage.setItem("flg1","1");
-				
-				
-			  } else {
+				function setChallengeCompleted() {
+    			document.cookie = "challenge_completed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+					}
+				} else {
 				alert('楽曲名が正しくありません。');
 			  }
+		}
 
-			  if(localStorage.getItem("flg1") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-		      	document.getElementById('a2').style.display = 'block';
-			  	document.getElementById('a3').style.display = 'block';
-				
-			}
-		}
+		function isChallengeCompleted() {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+        const [name, value] = cookie.trim().split('=');
+        if (name === "challenge_completed" && value === "true") {
+            return true;
+        }
+    }
+    return false;
+}
+
+window.onload = function() {
+    if (isChallengeCompleted()) {
+        let Title = document.getElementById("title");
+        Title.innerHTML = "課題が出現しました";
+        let A1 = document.getElementById("a1");
+        A1.innerHTML = "夏宵スターマイン MASTER:12+ ABFB";
+        let A2 = document.getElementById("a2");
+        A2.innerHTML = "ヴァンパイア MASTER:12+ ABFB スコア1009500点以上";
+        let A3 = document.getElementById("a3");
+        A3.innerHTML = "What color... MASTER:12+ ABFB スコア1008000点以上";
+    }
+};
 		
-		function deleteInput() {
-			localStorage.removeItem("flg1");
-		}
+		
 		</script>
         <br>
 		<br>
