@@ -59,16 +59,16 @@
 
 
 
-<h2 id="title" style="display: none;">課題が出現しました</h2>
-<p id="a1" style="display: none;">Rainbow Rush Story MASTER:13+ SSS+</p>
-<p id="a2" style="display: none;">初音ミクの消失 MASTER:13+ ABFB スコア1009500点以上</p>
-<p id="a3" style="display: none;">東亞 -O.N.G.E.K.I. MIX- MASTER:13+ スコア1008000点以上 ダメージ1以下</p>
+		<h2 id="title"> </h2>
+			<p id="a1"> </p>
+			<p id="a2"> </p>
+			<p id="a3"> </p>
 
-		<nav id="next" style="display:none" >
-			<<div class="button_solid006">
-        <a href="good.html">MUSIC４</a>
-    </div>
-		</nav>
+
+		<!--<h2>課題が出現しました</h2>
+        		<p>Rainbow Rush Story MASTER:13+ SSS+(二人とも達成)</p>
+        		<p>初音ミクの消失 MASTER:13+ ABFB スコア1009500点以上</p>
+        		<p>東亞 -O.N.G.E.K.I. MIX- MASTER:13+ スコア1008000点以上 ダメージ1以下</p>-->
 
 
         <script>
@@ -84,27 +84,21 @@
 			  const  r3= '東亞 -O.N.G.E.K.I. MIX-'; 
 
 		
-			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				localStorage.setItem("flg3","1");
-				
-			  } else {
+			 if (q1 === r1 && q2 === r2 && q3 === r3) {
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "Rainbow Rush Story MASTER:13+ SSS+(二人とも達成)";
+        		let A2 = document.getElementById("a2");
+        		A2.innerHTML = "初音ミクの消失 MASTER:13+ ABFB スコア1009500点以上";
+        		let A3 = document.getElementById("a3");
+        		A3.innerHTML = "東亞 -O.N.G.E.K.I. MIX- MASTER:13+ スコア1008000点以上 ダメージ1以下";
+				} else {
 				alert('楽曲名が正しくありません。');
 			  }
-
-			  if(localStorage.getItem("flg3") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-		      	document.getElementById('a2').style.display = 'block';
-			  	document.getElementById('a3').style.display = 'block';
-				
 			}
-		}
-		
-		function deleteInput() {
-			localStorage.removeItem("flg3");
-		}
 		</script>
-        <br>
+        	<br>
 		<br>
 		<br>
 		<br>
@@ -114,9 +108,7 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
+
 
 </main>
 
