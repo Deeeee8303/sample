@@ -47,17 +47,13 @@
 			  <br>
 			  <br>
 			  <br>
+			
+		<h2 id="title"> </h2>
+			<p id="a1"> </p>
 
+		<!--<h2>課題が出現しました</h2>
+        		<p>FestA of PandemoniuM MASTER:15 二人の合計スコアが1985000点以上</p>-->
 
-
-<h2 id="title" style="display: none;">課題が出現しました</h2>
-<p id="a1" style="display: none;">FestA of PandemoniuM MASTER:15 二人の合計スコアが1985000点以上</p>
-
-		<nav id="next" style="display:none" >
-			<div class="button_solid006">
-        <a href="line.html">課題達成？</a>
-    </div>
-		</nav>
 
 
         <script>
@@ -71,24 +67,20 @@
 
 		
 			  if (q1 === r1) {
-				localStorage.setItem("flg9","1");
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "FestA of PandemoniuM MASTER:15 二人の合計スコアが1985000点以上";
 				
 			  } else {
 				alert('楽曲名が正しくありません。');
 			  }
 
-			  if(localStorage.getItem("flg9") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-				
-			}
+			
 		}
 		
-		function deleteInput() {
-			localStorage.removeItem("flg9");
-		}
 		</script>
-        <br>
+        	<br>
 		<br>
 		<br>
 		<br>
@@ -98,9 +90,6 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
 
 </main>
 
