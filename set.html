@@ -57,18 +57,18 @@
 			  <br>
 			  <br>
 
+		<h2 id="title"> </h2>
+			<p id="a1"> </p>
+			<p id="a2"> </p>
+			<p id="a3"> </p>
 
 
-<h2 id="title" style="display: none;">課題が出現しました</h2>
-<p id="a1" style="display: none;">Last Celebration MASTER:14+ スコア1003000以上</p>
-<p id="a2" style="display: none;">Titania MASTER:14+ スコア1007500点以上</p>
-<p id="a3" style="display: none;">Singularity MASTER:14+ スコア1003000点以上</p>
+		<!--<h2>課題が出現しました</h2>
+        		<p>Last Celebration MASTER:14+ スコア1003000以上(二人とも達成)</p>
+        		<p>Titania MASTER:14+ スコア1007500点以上</p>
+        		<p>Singularity MASTER:14+ スコア1003000点以上</p>-->
 
-		<nav id="next" style="display:none" >
-			<div class="button_solid006">
-        <a href="yoink.html">MUSIC＋＋</a>
-    </div>
-		</nav>
+
 
 
         <script>
@@ -85,26 +85,22 @@
 
 		
 			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				localStorage.setItem("flg6","1");
-				
-			  } else {
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "Last Celebration MASTER:14+ スコア1003000以上(二人とも達成)";
+        		let A2 = document.getElementById("a2");
+        		A2.innerHTML = "Titania MASTER:14+ スコア1007500点以上";
+        		let A3 = document.getElementById("a3");
+        		A3.innerHTML = "Singularity MASTER:14+ スコア1003000点以上";
+				} else {
 				alert('楽曲名が正しくありません。');
-			  }
-
-			  if(localStorage.getItem("flg6") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-		      	document.getElementById('a2').style.display = 'block';
-			  	document.getElementById('a3').style.display = 'block';
-				
-			}
+			  }	  
 		}
 		
-		function deleteInput() {
-			localStorage.removeItem("flg6");
-		}
+		
 		</script>
-        <br>
+        	<br>
 		<br>
 		<br>
 		<br>
@@ -114,9 +110,7 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
+
 
 </main>
 
