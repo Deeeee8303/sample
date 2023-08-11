@@ -59,10 +59,7 @@
 
 
 
-			<h2 id="title" style="display: none;">課題が出現しました</h2>
-			<p id="a1" style="display: none;">Desteny Runner MASTER:13 スコア1007000以上</p>
-			<p id="a2" style="display: none;">迷える音色は恋の唄 MASTER:13 ABFB スコア1009000点以上</p>
-			<p id="a3" style="display: none;">最終鬼畜妹フランドール・S MASTER:13 ABFB スコア1009000点以上</p>
+			
 			
 		<nav id="next" style="display:none" >
 			<div class="button_solid006">
@@ -85,25 +82,20 @@
 
 		
 			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				localStorage.setItem("flg2","1");
-				
-			  } else {
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "Desteny Runner MASTER:13 スコア 1007000点以上(二人とも達成)";
+        		let A2 = document.getElementById("a2");
+        		A2.innerHTML = "迷える音色は恋の唄 MASTER:13 ABFB スコア1009000点以上";
+        		let A3 = document.getElementById("a3");
+        		A3.innerHTML = "最終鬼畜妹フランドール・S MASTER:13 ABFB スコア1009000点以上";
+				} else {
 				alert('楽曲名が正しくありません。');
 			  }
-
-			  if(localStorage.getItem("flg2") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-		      	document.getElementById('a2').style.display = 'block';
-			  	document.getElementById('a3').style.display = 'block';
-				
-			
-			}
 		}
 		
-		function deleteInput() {
-			localStorage.removeItem("flg2");
-		}
+		
 
 		  </script>
         <br>
@@ -116,9 +108,6 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
 
 </main>
 
