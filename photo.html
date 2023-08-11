@@ -48,16 +48,12 @@
 			  <br>
 			  <br>
 
-
-
-	<h2 id="title" style="display: none;">課題が出現しました</h2>
-	<p id="a1" style="display: none;">TECHNOPOLIS 2085 MASTER:14 二人の合計スコアが2012300点以上</p>
-
-		<nav id="next" style="display:none" >
-			<div class="button_solid006">
-        <a href="set.html">MUSIC５</a>
-    </div>
-		</nav>
+		<h2 id="title"> </h2>
+			<p id="a1"> </p>
+			
+		<!--<h2>課題が出現しました</h2>
+        		<p>TECHNOPOLIS 2085 MASTER:14 二人の合計スコアが2012300点以上</p>-->
+	
 
 
         <script>
@@ -71,22 +67,17 @@
 
 		
 			  if (q1 === r1) {
-				localStorage.setItem("flg5","1");
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "TECHNOPOLIS 2085 MASTER:14 二人の合計スコアが2012300点以上";
 				
 			  } else {
 				alert('楽曲名が正しくありません。');
 			  }
-
-			  if(localStorage.getItem("flg5") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-				
-			}
 		}
 		
-		function deleteInput() {
-			localStorage.removeItem("flg5");
-		}
+		
 		</script>
         <br>
 		<br>
@@ -98,9 +89,7 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
+
 
 </main>
 
