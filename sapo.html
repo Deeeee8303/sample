@@ -58,17 +58,17 @@
 			  <br>
 
 
+		<h2 id="title"> </h2>
+			<p id="a1"> </p>
+			<p id="a2"> </p>
+			<p id="a3"> </p>
 
-<h2 id="title" style="display: none;">課題が出現しました</h2>
-<p id="a1" style="display: none;">怨撃 MASTER:15 完走</p>
-<p id="a2" style="display: none;">ω4 MASTER:15 スコア1007000点以上</p>
-<p id="a3" style="display: none;">Regulus MASTER:15 SSS</p>
 
-		<nav id="next" style="display:none" >
-			<div class="button_solid006">
-        <a href="file.html">BOSS</a>
-    </div>
-		</nav>
+		<!--<h2>課題が出現しました</h2>
+        		<p>怨撃 MASTER:15 完走(二人とも達成)</p>
+        		<p>ω4 MASTER:15 スコア1007000点以上</p>
+        		<p>Regulus MASTER:15 SSS</p>-->
+
 
 
         <script>
@@ -85,26 +85,24 @@
 
 		
 			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				localStorage.setItem("flg8","1");
-				
-			  } else {
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "怨撃 MASTER:15 完走(二人とも達成)";
+        		let A2 = document.getElementById("a2");
+        		A2.innerHTML = "ω4 MASTER:15 スコア1007000点以上";
+        		let A3 = document.getElementById("a3");
+        		A3.innerHTML = "Regulus MASTER:15 SSS";
+				} else {
 				alert('楽曲名が正しくありません。');
 			  }
 
-			  if(localStorage.getItem("flg8") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-		      	document.getElementById('a2').style.display = 'block';
-			  	document.getElementById('a3').style.display = 'block';
-				
-			}
+			  
 		}
 		
-		function deleteInput() {
-			localStorage.removeItem("flg8");
-		}
+		
 		</script>
-        <br>
+        	<br>
 		<br>
 		<br>
 		<br>
@@ -114,9 +112,7 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
+
 
 </main>
 
