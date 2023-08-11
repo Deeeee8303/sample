@@ -58,17 +58,18 @@
 			  <br>
 
 
+		<h2 id="title"> </h2>
+			<p id="a1"> </p>
+			<p id="a2"> </p>
+			<p id="a3"> </p>
 
-	<h2 id="title" style="display: none;">課題が出現しました</h2>
-	<p id="a1" style="display: none;">SILENT BLUE MASTER:14 スコア1008000以上</p>
-	<p id="a2" style="display: none;">神威 MASTER:14 スコア1008000点以上 ステルスモードオン</p>
-	<p id="a3" style="display: none;">GEOMETRIC DANCE MASTER:14 スコア1003000点以上 ステルスモードオン</p>
 
-		<nav id="next" style="display:none" >
-			<div class="button_solid006">
-        <a href="photo.html">MUSIC＋</a>
-    </div>
-		</nav>
+		<!--<h2>課題が出現しました</h2>
+        		<p>SILENT BLUE MASTER:14 スコア1008000以上</p>
+        		<p>神威 MASTER:14 スコア1008000点以上 ステルスモードオン</p>
+        		<p>GEOMETRIC DANCE MASTER:14 スコア1003000点以上 ステルスモードオン</p>-->
+	
+
 
 
         <script>
@@ -85,26 +86,21 @@
 
 		
 			  if (q1 === r1 && q2 === r2 && q3 === r3) {
-				localStorage.setItem("flg4","1");
-				
-			  } else {
+				let Title = document.getElementById("title");
+        		Title.innerHTML = "課題が出現しました";
+        		let A1 = document.getElementById("a1");
+        		A1.innerHTML = "SILENT BLUE MASTER:14 スコア1008000以上";
+        		let A2 = document.getElementById("a2");
+        		A2.innerHTML = "神威 MASTER:14 スコア1008000点以上 ステルスモードオン";
+        		let A3 = document.getElementById("a3");
+        		A3.innerHTML = "GEOMETRIC DANCE MASTER:14 スコア1003000点以上 ステルスモードオン";
+				} else {
 				alert('楽曲名が正しくありません。');
 			  }
-
-			  if(localStorage.getItem("flg4") == "1"){
-			  	document.getElementById('title').style.display = 'block';
-			  	document.getElementById('a1').style.display = 'block';
-		      	document.getElementById('a2').style.display = 'block';
-			  	document.getElementById('a3').style.display = 'block';
-				
-			}
 		}
 		
-		function deleteInput() {
-			localStorage.removeItem("flg4");
-		}
 		</script>
-        <br>
+        	<br>
 		<br>
 		<br>
 		<br>
@@ -114,9 +110,6 @@
 
 </article>
 
-<div>
-    <button type="button" onclick="deleteInput()">削除</button>
-</div>
 
 </main>
 
