@@ -108,7 +108,7 @@ header {
 	justify-content: space-between;	/*並びかたの種類の指定*/
 	align-items: center;			/*垂直揃えの指定。天地中央に配置されるように。*/
 	background: #56a5b7;			/*背景色*/
-	position: fixed; z-index: 1;	/*スクロールしても動かないようにする指定*/
+	position: sticky; z-index: 1;	/*スクロールしても動かないようにする指定*/
 	width: 100%;
 	padding: 0 3%;					/*上下、左右へのヘッダー内の余白*/
 	height: 100px;					/*ヘッダーの高さ。変更する場合、数行下にある#mainimgのtopの数値も合わせて変更して下さい。*/
