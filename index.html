@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-store">
-<title>DeeDからの挑戦状</title>
+<title>DeeDからの挑戦状アーカイブ</title>
 <link rel="stylesheet" type=text/css href="css/style.css"/> 
 <link
   href="https://fonts.googleapis.com/css?family=Open+Sans"
@@ -15,7 +15,7 @@
 <header>
 <a href="index.html"><img src="img/logo.png" alt="logo"></a>
 <div class="logo">
-<h1>DeeDからの挑戦状</h1>
+<h1>DeeDからの挑戦状アーカイブ</h1>
 </div>
 </header>
 
@@ -38,18 +38,10 @@
 </div>
 
 
-<h3>表示されているお題を解読しよう</h3>
-<p>表示されている文章や画像を解読すると、各課題それぞれのキーワードに繋がります。</p>
-<p>一部、特定の文字列を入力することで課題が進行する場合があります。</p>
-<h3>キーワードを入力しよう</h3>
-<p id="p6">テキストボックスに正しいキーワードを入れて[回答する]ボタンを押すと、課題の内容が表示されます。一部表記ゆれ対応してありますが、想定外の場合は運営が直接確認いたします。</p>
-<p id="p5">課題をクリアしたら、直撮り、オンゲキNETのどちらかのリザルトをてるてる朝霞店のLINEに送信してください。人力で判定後、人力で次のMUSICを解禁します。</p>
-<h3>その他注意事項</h3>
-<p id="p4">わからないことや、ページに関する不具合等があったら都度お知らせください。</p>
-<p>「プレイ」という記述は、楽曲の完走を意図しています。</p>
-<p id="p3">開発者モードの使用はお控えください。</p>
-<p id="p1">出現する課題は、開発者(DeeD)がテストプレイ、クリア済みです。</p>
-<p id="p"></p>
+<h3>このページは何？</h3>
+<p>てるてる遠征にて行われたDeeDからの挑戦状課題のアーカイブページです。</p>
+<p>課題はすべて進行済みの状態で保存されています。</p>
+
 
 
 
@@ -60,136 +52,6 @@
  
   <p>-DeeDからの挑戦状 てるてる遠征課題-</p>
   
-<script>
-
-  
-
-  fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/1',{
-        method: 'GET',
-        }) 
-
-        .then(response => {
-        return response.json();
-        })
-
-        .then(data => {
-          const status1 = data.status; 
-          const P1 = data.p1;
-
-          if(status1 == 0){
-            document.getElementById("p").textContent = P1;
-          }
-
-          fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/2',{
-                method: 'GET',
-                }) 
-
-                .then(response => {
-                return response.json();
-                })
-
-                .then(data => {
-                  const status2 = data.status; 
-                  const P2 = data.p2;
-
-                  if(status1 == 1 && status2 == 0){
-                    document.getElementById("p").textContent = P2;
-                  }
-    
-    
-                  fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/3',{
-                        method: 'GET',
-                        }) 
-
-                        .then(response => {
-                        return response.json();
-                        })
-
-                        .then(data => {
-                          const status3 = data.status; 
-                          const P3 = data.p3;
-
-                          if(status1 == 1 && status2 == 1 && status3 == 0){
-                            document.getElementById("p").textContent = P3;
-                          }
-      
-                          fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/4',{
-                                method: 'GET',
-                                }) 
-
-                                .then(response => {
-                                return response.json();
-                                })
-
-                                .then(data => {
-                                  const status4 = data.status;
-                                  const lstatus4 = data.lstatus; 
-                                  const P4 = data.p4;
-
-                                  if(status1 == 1 && status2 == 1 && status3 == 1 && status4 == 0 && lstatus4 == 1){
-                                    document.getElementById("p").textContent = P4;
-                                  }
-        
-                                  fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/7',{
-                                        method: 'GET',
-                                        }) 
-
-                                        .then(response => {
-                                        return response.json();
-                                        })
-
-                                        .then(data => {
-                                          const status7 = data.status; 
-                                          const lstatus7 = data.lstatus; 
-                                          const P7 = data.p7;
-
-                                          if(status1 == 1 && status2 == 1 && status3 == 1 && status4 == 1 && status7 == 0 && lstatus7 == 1){
-                                            document.getElementById("p").textContent = P7;
-                                          }
-                                          fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/8',{
-                                                method: 'GET',
-                                                }) 
-
-                                                .then(response => {
-                                                return response.json();
-                                                })
-
-                                                .then(data => {
-                                                  const status8 = data.status; 
-                                                  const lstatus8 = data.lstatus; 
-                                                  const P8 = data.p8;
-
-                                                  if(status1 == 1 && status2 == 1 && status3 == 1 && status4 == 1 && status7 == 1 && status8 == 0 && lstatus8 == 1){
-                                                    document.getElementById("p").textContent = P8;
-                                                  }
-
-                                                  fetch('https://7f2e-2404-7a82-740-2a00-2562-e67d-a148-af57.ngrok-free.app/list/10',{
-                                                        method: 'GET',
-                                                        }) 
-
-                                                        .then(response => {
-                                                        return response.json();
-                                                        })
-
-                                                        .then(data => {
-                                                          const status10 = data.status;
-                                                          const lstatus10 = data.lstatus;  
-                                                          const P10 = data.p10;
-
-                                                          if(status1 == 1 && status2 == 1 && status3 == 1 && status4 == 1 && status7 == 1 && status8 == 1 && status10 == 0 && lstatus10 == 1){
-                                                            document.getElementById("p").textContent = P10;
-                                                          }
-                                                    })
-                                          })
-                                    })
-                            })
-                    })
-            })
-    })
-
-  
-  
-</script>
 </footer>
 
 
